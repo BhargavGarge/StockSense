@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container header-wrapper">
         <Link href="/">
           <Image
-            src="/assets/icons/logo.svg"
+            src="/assets/icons/v2.logo.svg"
             alt="StockSense logo"
             width={140}
             height={32}
