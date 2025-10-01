@@ -3,11 +3,12 @@ import Image from "next/image";
 
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { auth } from "@/lib/(better-auth)/auth";
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
-  // const session = await auth.api.getSession({ headers: await headers() })
+  const session = await auth.api.getSession({ headers: await headers() });
 
-  // if(session?.user) redirect('/')
+  if (session?.user) redirect("/");
 
   return (
     <main className="auth-layout">
@@ -15,7 +16,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
         <Link href="/" className="auth-logo">
           <Image
             src="/assets/icons/v2.logo.svg"
-            alt="Signalist logo"
+            alt="StockSense logo"
             width={140}
             height={32}
             className="h-8 w-auto"
