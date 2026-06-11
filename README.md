@@ -57,9 +57,7 @@ Node.js
 
 npm
 
-Clone the Repository
-git clone https://github.com/adrianhajdin/signalist_stock-tracker-app.git
-cd signalist_stock-tracker-app
+
 
 Install Dependencies
 npm install
